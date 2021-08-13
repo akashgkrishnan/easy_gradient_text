@@ -131,6 +131,10 @@ class GradientText extends StatelessWidget {
         map['begin'] = Alignment.bottomCenter;
         map['end'] = Alignment.topCenter;
         break;
+      case GradientDirection.tlbr:
+        map['begin'] = Alignment.topLeft;
+        map['end'] = Alignment.bottomRight;
+        break;
     }
 
     return map[key];
@@ -138,4 +142,4 @@ class GradientText extends StatelessWidget {
 }
 
 enum GradientType { linear, radial }
-enum GradientDirection { rtl, ltr, ttb, btt }
+enum GradientDirection { rtl, ltr, ttb, btt, tlbr }
